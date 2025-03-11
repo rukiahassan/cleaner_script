@@ -1,4 +1,4 @@
-%pip install nltk
+#%pip install nltk
 import pandas as pd
 import re
 import nltk
@@ -14,7 +14,7 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 # Load dataset (use raw string for Windows paths)
-file_path = 'data\athletics_data.csv'
+file_path = 'athletics_data.csv'
 df = pd.read_csv(file_path)
 
 # Handle missing values & duplicates

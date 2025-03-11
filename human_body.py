@@ -12,6 +12,27 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 
+#%pip install pyspellchecker
+from spellchecker import SpellChecker
+
+def check_spelling(text):
+    # Initialize the spell checker
+    spell = SpellChecker()
+    
+    # Split the input text into words
+    words = text.split()
+    
+    # Find words that may be misspelled
+    misspelled = spell.unknown(words)
+    
+    corrections = {}
+    for word in misspelled:
+        # Get the most likely correction
+        corrections[word] = spell.correction(word)
+    
+    return corrections
+
+
 # Load dataset (use raw string for Windows paths)
 file_path = 'data\human_body_data.csv'
 df = pd.read_csv(file_path)
