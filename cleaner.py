@@ -12,6 +12,8 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 
+#I have come to add someting on this file
+
 
 # Load dataset (use raw string for Windows paths)
 file_path = 'data\cnn_articles.csv'
